@@ -141,6 +141,7 @@ function OpenShop(config, isPedMenu, shopType)
 
         client.startPlayerCustomization(function(appearance)
             if appearance then
+                if Config.InventoryQS then exports['qs-inventory']:setInClothing(false)
                 if not isPedMenu then
                     TriggerServerEvent("illenium-appearance:server:chargeCustomer", shopType)
                 end
